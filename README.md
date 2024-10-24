@@ -1,2 +1,1 @@
-
-XIn chaof moi nguoi
+HELLO
