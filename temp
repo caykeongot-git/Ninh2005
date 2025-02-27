@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+#include <algorithm>
+#include <cctype>
+
+using namespace std;
+
+typedef struct NODE {
+	int x;
+	struct NODE* next;
+}NODE;
+
+typedef struct LIST {
+	NODE* head;
+	NODE* tail;
+}LIST;
+
+void Init(LIST& l) {
+	l.head = l.tail = NULL;
+}
+
+bool IsEmpty(LIST l) {
+	return l.head == NULL;
+}
+
+void DeleteList(LIST& l) {
+	while (l.head != NULL) {
+		NODE* temp = l.head;
+		l.head = l.head->next;
+		delete temp;
+	}
+	l.tail = NULL;
+}
+
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+	cout.tie(nullptr);
+	
+	LIST l;
+	Init(l);
+
+	return 0;
+}
